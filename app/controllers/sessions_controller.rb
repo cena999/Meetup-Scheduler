@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # before_action :set_session, only: [:show, :edit, :update, :destroy]
+  before_action :set_session, only: [:show, :edit, :update, :destroy]
 
   # GET /sessions
   # GET /sessions.json
@@ -24,6 +24,7 @@ class SessionsController < ApplicationController
   # POST /sessions
   # POST /sessions.json
   def create
+    # render plain: params[:session].inspect
     @session = Session.new(session_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class SessionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def session_params
-      params.fetch(:session, {})
+      params.require(:session).permit(:session_name, :session_password, :proposed_date)
     end
 end
