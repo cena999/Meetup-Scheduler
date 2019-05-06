@@ -24,6 +24,7 @@ class MeetupsController < ApplicationController
   # POST /meetups
   # POST /meetups.json
   def create
+    # render plain: params[:session].inspect
     @meetup = Meetup.new(meetup_params)
 
     respond_to do |format|
