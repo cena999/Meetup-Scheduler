@@ -21,9 +21,14 @@
     <%= form.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
+  <h3>Proposed Dates</h3>
+  <div id="schedules">
+  	<%= form.fields_for :schedules do |schedule| %>
+      <%= render 'schedule_fields', :form => schedule %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add proposed date', form, :schedules %>
+    </div>
   </div>
 
   <div class="actions">
