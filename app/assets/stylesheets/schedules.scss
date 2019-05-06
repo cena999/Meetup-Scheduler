@@ -1,0 +1,113 @@
+// Place all the styles related to the Schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.index-page {
+background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/AO8NDC5UDL.jpg");
+background-size: cover;
+}
+
+.index-start {
+	max-width: 960px;
+	background-color: #0F1115;
+  margin: 0 auto;
+  position: relative;
+  top: 250px;
+  padding: 16px;
+  border-radius: 25px;
+}
+
+.index-start h1 {
+	text-align: center;
+	color: #EEF0F2;
+}
+
+.index-start button {
+	color: #EEF0F2;
+}
+
+.create-btn {
+	background-color: #1B9AAA;
+	outline: 0;
+}
+
+.create-btn:hover {
+	background-color: #14717C;
+}
+
+.create-btn:focus {
+	background-color: #14717C;
+}
+
+.create-btn a {
+	text-decoration: none;
+	color: white ;
+}
+
+.login-btn {
+	background-color: #E57582;
+}
+
+.login-btn:hover {
+	background-color: #A7565F;
+}
+
+.login-page {
+background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/9YUWF6OT5T.jpg");
+background-size: cover;
+}
+
+.login-start {
+	max-width: 960px;
+	background-color: #0F1115;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  padding: 16px;
+  border-radius: 25px;
+}
+
+.login-page h3 {
+	color: #EEF0F2;
+}
+
+.login-start h1 {
+	text-align: center;
+	color: #EEF0F2;
+}
+
+.login-start button {
+	color: #EEF0F2;
+}
+
+.login-btn a {
+	text-decoration: none;
+	color: white ;
+}
+
+.create-page {
+	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/D25OZNLFI2.jpg");
+	background-size: cover;
+}
+
+.create-start {
+	max-width: 960px;
+	background-color: #0F1115;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  padding: 16px;
+  border-radius: 25px;
+}
+
+.create-page h3 {
+	color: #EEF0F2;
+}
+
+.create-start h1 {
+	text-align: center;
+	color: #EEF0F2;
+}
+
+.create-start button {
+	color: #EEF0F2;
+}
