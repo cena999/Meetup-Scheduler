@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_04_070120) do
+ActiveRecord::Schema.define(version: 2019_05_06_060407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "meetups", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "date"
+    t.bigint "meetup_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meetup_id"], name: "index_schedules_on_meetup_id"
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.string "session_name"
@@ -23,4 +39,5 @@ ActiveRecord::Schema.define(version: 2019_05_04_070120) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "schedules", "meetups"
 end
