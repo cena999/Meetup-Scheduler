@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :sessions
+
+  root 'sessions#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'schedules#index'
+  get '/create' => 'sessions#create', as: 'create_session'
+  get '/login'  => 'sessions#login',  as: 'login_session'
 
-  get '/create' => 'schedules#create', as: 'create_schedule'
-  get '/login'  => 'schedules#login',  as: 'login_schedule'
 end
