@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @meetup.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @meetup.description %>
+</p>
+
+<p>
+  <strong>Proposed Dates:</strong>
+  <ul>
+  	<% @meetup.schedules.each do |schedule| %>
+      <li><%= schedule.date %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_meetup_path(@meetup) %> |
+<%= link_to 'Back', meetups_path %>
