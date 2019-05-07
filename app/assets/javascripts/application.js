@@ -15,3 +15,8 @@
 //= require jquery
 //= require_tree .
 //= require bootstrap-datepicker
+
+
+$(document).ready(() => {
+    console.log("Hello!")
+});

@@ -10,4 +10,8 @@ class SchedulesController < ApplicationController
   def login
 
   end
+
+  def available
+
+  end
 end

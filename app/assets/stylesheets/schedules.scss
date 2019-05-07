@@ -61,7 +61,7 @@ background-size: cover;
 	background-color: #0F1115;
   margin: 0 auto;
   position: relative;
-  top: 200px;
+  top: 150px;
   padding: 16px;
   border-radius: 25px;
 }
@@ -94,7 +94,7 @@ background-size: cover;
 	background-color: #0F1115;
   margin: 0 auto;
   position: relative;
-  top: 150px;
+  top: 90px;
   padding: 16px;
   border-radius: 25px;
 }
@@ -110,4 +110,55 @@ background-size: cover;
 
 .create-start button {
 	color: #EEF0F2;
+}
+
+.available-page {
+	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/SKGNYY6PK9.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.available-start {
+	max-width: 960px;
+	background-color: #0F1115;
+  margin: 0 auto;
+  position: relative;
+  top: 90px;
+  padding: 16px;
+  border-radius: 25px;
+}
+
+.available-page h3 {
+	color: #EEF0F2;
+}
+
+.available-start h1 {
+	text-align: center;
+	color: #EEF0F2;
+}
+
+.available-start h3 {
+	text-align: center;
+	color: #EEF0F2;
+}
+
+.available-start button {
+	color: #EEF0F2;
+}
+
+.table td, .table th {
+	color: white		;
+}
+
+.table-row {
+	text-align: center;
+}
+
+.table-row td {
+	font-size: 24px;
+}
+
+.table thead {
+	background-color: #E57582;
 }
