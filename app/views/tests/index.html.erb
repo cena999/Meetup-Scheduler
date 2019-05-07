@@ -5,6 +5,87 @@
 			<div>
 				<button type="button" class="btn btn-lg btn-block create-btn" id="create-toggle"> CREATE NEW SESSION <%# link_to 'CREATE NEW SESSION', create_session_url %>  </button>
 
+				<%= form_with scope: :dates, url: new_test_path, :html => {:id => "create-form"},  local: true do |form| %>
+				<div class="form-row">
+
+					<div class="col-md-6">
+				    <%= form.label :name  %>
+				    <%= form.text_field :name, :class => "form-control"%>
+				  </div>
+
+				  <div class="col-md-6">
+				    <%= form.label :description %>
+				    <%= form.text_field :description, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-4">
+				    <%= form.label :date %>
+				    <%= form.date_field :date, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-4">
+				    <%= form.label :date %>
+				    <%= form.date_field :date2, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-4">
+				    <%= form.label :date %>
+				    <%= form.date_field :date3, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-12">
+				  	<%= form.label :password, :style => "visibility:hidden" %>
+				  <%= form.submit "Create", :class => "btn btn-primary btn-block" %>
+				  </div>
+
+			  </div>
+			<% end %>
+
+
+
+
+			</div>
+			<br>
+
+
+
+
+
+			<div>
+				<button type="button" class="btn btn-lg btn-block login-btn" id="login-toggle"> LOGIN EXISTING SESSION<%# link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
+
+				<%= form_with scope: :test, url: tests_path, :html => {:id => "login-form"},  local: true do |form| %>
+				<div class="form-row">
+
+					<div class="col-md-5">
+				    <%= form.label :session  %>
+				    <%= form.text_field :session, :class => "form-control"%>
+				  </div>
+
+				  <div class="col-md-5">
+				    <%= form.label :password %>
+				    <%= form.password_field :password, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-2">
+				  	<%= form.label :password, :style => "visibility:hidden" %>
+				  <%= form.submit "Login", :class => "btn btn-primary btn-block" %>
+				  </div>
+
+			  </div>
+			<% end %>
+
+			</div>
+
+		</div>
+
+
+
+	</body>
+
+
+
+<!--  ORIGINAL CREATE FORM
 				<form id="create-form">
 				  <div class="form-row">
 
@@ -38,44 +119,7 @@
 				    	  <button class="btn btn-primary btn-block" type="submit">Schedule Meetup</button>
 				    </div>
 				  </div>
-				</form>
-
-			</div>
-			<br>
-
-
-
-
-
-			<div>
-				<button type="button" class="btn btn-lg btn-block login-btn" id="login-toggle"> LOGIN EXISTING Session<%# link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
-
-				<%= form_with scope: :test, url: tests_path, :html => {:id => "login-form"},  local: true do |form| %>
-				<div class="form-row">
-
-					<div class="col-md-5">
-				    <%= form.label :session  %>
-				    <%= form.text_field :session, :class => "form-control"%>
-				  </div>
-
-				  <div class="col-md-5">
-				    <%= form.label :password %>
-				    <%= form.text_field :password, :class => "form-control" %>
-				  </div>
-
-				  <div class="col-md-2">
-				  	<%= form.label :password, :style => "visibility:hidden" %>
-				  <%= form.submit "Login", :class => "btn btn-primary btn-block" %>
-				  </div>
-
-			  </div>
-			<% end %>
-
-			</div>
-
-		</div>
-	</body>
-
+				</form> -->
 
 
 

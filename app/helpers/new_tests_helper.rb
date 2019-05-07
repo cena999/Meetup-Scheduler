@@ -1,0 +1,2 @@
+module NewTestsHelper
+end

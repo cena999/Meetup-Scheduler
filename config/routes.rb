@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   get '/index' => 'tests#index'
 
   get '/test/meet' => "tests#show", as: 'login'
+  get '/404' => "tests#create"
+
+  post '/tests/new' => "tests#new"
 
 end
