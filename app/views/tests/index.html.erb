@@ -50,7 +50,37 @@
 			<div>
 				<button type="button" class="btn btn-lg btn-block login-btn" id="login-toggle"> LOGIN EXISTING Session<%# link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
 
-				<form id="login-form">
+				<%= form_with scope: :test, url: tests_path, :html => {:id => "login-form"},  local: true do |form| %>
+				<div class="form-row">
+
+					<div class="col-md-5">
+				    <%= form.label :session  %>
+				    <%= form.text_field :session, :class => "form-control"%>
+				  </div>
+
+				  <div class="col-md-5">
+				    <%= form.label :password %>
+				    <%= form.text_field :password, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-2">
+				  	<%= form.label :password, :style => "visibility:hidden" %>
+				  <%= form.submit "Login", :class => "btn btn-primary btn-block" %>
+				  </div>
+
+			  </div>
+			<% end %>
+
+			</div>
+
+		</div>
+	</body>
+
+
+
+
+<!-- Original Login Form -->
+	<!-- 				<form id="login-form" post="/tests/show">
 				  <div class="form-row">
 
 				    <div class="col-md-5">
@@ -65,13 +95,7 @@
 
 				    <div class="col-md-2">
 				    	      <label for="submit"> <span style="visibility:hidden;">test </span> </label>
-				    	  <button class="btn btn-primary btn-block" type="submit">Submit form</button>
+				    	  <button class="btn btn-primary btn-block" type="submit"> <%# link_to 'SUBMIT FORM', login_url %></button>
 				    </div>
 				  </div>
-				</form>
-
-			</div>
-
-		</div>
-
-	</body>
+				</form> -->
