@@ -1,7 +1,77 @@
 	<body class="index-page">
 		<div class="index-start">
+
 			<h1>Meetup Scheduler!</h1> <br>
-			<button type="button" class="btn btn-lg btn-block create-btn"> <%= link_to 'CREATE NEW SESSION', create_session_url %>  </button>
-			<button type="button" class="btn btn-lg btn-block login-btn"><%= link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
+			<div>
+				<button type="button" class="btn btn-lg btn-block create-btn" id="create-toggle"> CREATE NEW SESSION <%# link_to 'CREATE NEW SESSION', create_session_url %>  </button>
+
+				<form id="create-form">
+				  <div class="form-row">
+
+				    <div class="col-md-6">
+				      <label for="schedule">Name</label>
+				      <input type="text" class="form-control" id="validationCustom01" placeholder="banana" required>
+				    </div>
+
+				    <div class="col-md-6">
+				      <label for="password">Description</label>
+				      <input type="text" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-4">
+				      <label for="password">Date 1</label>
+				      <input type="date" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				     <div class="col-md-4">
+				      <label for="password">Date 2</label>
+				      <input type="date" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-4">
+				      <label for="password">Date 3</label>
+				      <input type="date" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-12">
+				    	      <label for="submit"> <span style="visibility:hidden;">test </span> </label>
+				    	  <button class="btn btn-primary btn-block" type="submit">Schedule Meetup</button>
+				    </div>
+				  </div>
+				</form>
+
+			</div>
+			<br>
+
+
+
+
+
+			<div>
+				<button type="button" class="btn btn-lg btn-block login-btn" id="login-toggle"> LOGIN EXISTING Session<%# link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
+
+				<form id="login-form">
+				  <div class="form-row">
+
+				    <div class="col-md-5">
+				      <label for="schedule">Session ID</label>
+				      <input type="text" class="form-control" id="validationCustom01" placeholder="banana" required>
+				    </div>
+
+				    <div class="col-md-5">
+				      <label for="password">Password</label>
+				      <input type="text" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-2">
+				    	      <label for="submit"> <span style="visibility:hidden;">test </span> </label>
+				    	  <button class="btn btn-primary btn-block" type="submit">Submit form</button>
+				    </div>
+				  </div>
+				</form>
+
+			</div>
+
 		</div>
+
 	</body>

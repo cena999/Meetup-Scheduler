@@ -2,8 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .index-page {
-background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/AO8NDC5UDL.jpg");
-background-size: cover;
+	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/AO8NDC5UDL.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#create-form {
+	display: none;
+}
+
+#login-form {
+	display: none;
 }
 
 .index-start {
@@ -11,7 +21,7 @@ background-size: cover;
 	background-color: #0F1115;
   margin: 0 auto;
   position: relative;
-  top: 250px;
+  top: 100px;
   padding: 16px;
   border-radius: 25px;
 }
@@ -23,6 +33,11 @@ background-size: cover;
 
 .index-start button {
 	color: #EEF0F2;
+}
+
+.index-page label {
+	color: white;
+	padding-top: 4px;
 }
 
 .create-btn {
@@ -52,8 +67,10 @@ background-size: cover;
 }
 
 .login-page {
-background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/9YUWF6OT5T.jpg");
-background-size: cover;
+	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/9YUWF6OT5T.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .login-start {
@@ -87,6 +104,8 @@ background-size: cover;
 .create-page {
 	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/D25OZNLFI2.jpg");
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .create-start {
