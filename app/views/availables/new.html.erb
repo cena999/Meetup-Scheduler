@@ -1,31 +1,18 @@
-<body class="available-page">
-    <div class="available-start">
-        <h1><%= @meetup.name %></h1> <br>
+<h1><%= @meetup.name %></h1>
 
-				<%= form_with scope: :available, url: availables_path, local: true do |form| %>
-				<table class="table">
-				  <thead class="">
-				    <tr class="table-row">
-				    	<th scope="col">Your Name</th>
-				    	<%= @schedules.each do |schedule| %>
-				    		<th scope="col"><%= schedule.date %></th>
-				    	<% end %>
-				    </tr>
-				  </thead>
+<%= form_with scope: :available, url: availables_path, local: true do |form| %>
+	<p>
+		<%= form.label :partcipant_name %>
+		<%= form.text_field :person_name %>
+	</p>
 
-				  <tbody>
-				    <tr class="table-row">
-				      <th scope="row"><%= form.text_field :person_name %></th>
-				    		<td><%= form.collection_check_boxes :available, @schedules, :id, :date %></td>
-				    </tr>
-				  </tbody>
-				</table>
+	<% @meetup.schedules.each do |schedule| %>
+		<%= fields_for "available[schedule_ids][]", schedule do |available_fields| %>
+			<%= schedule.date %><%= available_fields.check_box :id%>
+		<% end %>
+	<% end %>
 
-				<div class="actions">
-					<%= form.submit %>
-				</div>
-
-				<% end %>
-
-		</div>
-</body>
+	<p>
+		<%= form.submit 'Submit Participation'%>
+	</p>
+<% end %>

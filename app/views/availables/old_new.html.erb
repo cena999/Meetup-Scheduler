@@ -1,0 +1,31 @@
+<body class="available-page">
+    <div class="available-start">
+        <h1><%= @meetup.name %></h1> <br>
+
+				<%= form_with scope: :available, url: availables_path, local: true do |form| %>
+				<table class="table">
+				  <thead class="">
+				    <tr class="table-row">
+				    	<th scope="col">Your Name</th>
+				    	<%= @schedules.each do |schedule| %>
+				    		<th scope="col"><%= schedule.date %></th>
+				    	<% end %>
+				    </tr>
+				  </thead>
+
+				  <tbody>
+				    <tr class="table-row">
+				      <th scope="row"><%= form.text_field :person_name %></th>
+				    		<td><%= form.collection_check_boxes :available, @schedules, :id, :date %></td>
+				    </tr>
+				  </tbody>
+				</table>
+
+				<div class="actions">
+					<%= form.submit %>
+				</div>
+
+				<% end %>
+
+		</div>
+</body>
