@@ -1,7 +1,145 @@
 	<body class="index-page">
 		<div class="index-start">
+
 			<h1>Meetup Scheduler!</h1> <br>
-			<button type="button" class="btn btn-lg btn-block create-btn"> <%= link_to 'CREATE NEW SESSION', create_session_url %>  </button>
-			<button type="button" class="btn btn-lg btn-block login-btn"><%= link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
+			<div>
+				<button type="button" class="btn btn-lg btn-block create-btn" id="create-toggle"> CREATE NEW SESSION <%# link_to 'CREATE NEW SESSION', create_session_url %>  </button>
+
+				<%= form_with scope: :dates, url: new_test_path, :html => {:id => "create-form"},  local: true do |form| %>
+				<div class="form-row">
+
+					<div class="col-md-6">
+				    <%= form.label :name  %>
+				    <%= form.text_field :name, :class => "form-control"%>
+				  </div>
+
+				  <div class="col-md-6">
+				    <%= form.label :description %>
+				    <%= form.text_field :description, :class => "form-control" %>
+				  </div>
+
+<!-- 				  <div class="col-md-4">
+				    <%# form.label :date %>
+				    <%# form.date_field :date, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-4">
+				    <%# form.label :date %>
+				    <%# form.date_field :date2, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-4">
+				    <%# form.label :date %>
+				    <%# form.date_field :date3, :class => "form-control" %>
+				  </div> -->
+
+				  <div class="col-md-12">
+				  	<%= form.label :password, :style => "visibility:hidden" %>
+				  <%= form.submit "Create", :class => "btn btn-primary btn-block" %>
+				  </div>
+
+			  </div>
+			<% end %>
+
+
+
+
+			</div>
+			<br>
+
+
+
+
+
+			<div>
+				<button type="button" class="btn btn-lg btn-block login-btn" id="login-toggle"> LOGIN EXISTING SESSION<%# link_to 'LOGIN EXISTING SESSION', login_session_url %> </button> <br>
+
+				<%= form_with scope: :test, url: tests_path, :html => {:id => "login-form"},  local: true do |form| %>
+				<div class="form-row">
+
+					<div class="col-md-5">
+				    <%= form.label :session  %>
+				    <%= form.text_field :session, :class => "form-control"%>
+				  </div>
+
+				  <div class="col-md-5">
+				    <%= form.label :password %>
+				    <%= form.password_field :password, :class => "form-control" %>
+				  </div>
+
+				  <div class="col-md-2">
+				  	<%= form.label :password, :style => "visibility:hidden" %>
+				  <%= form.submit "Login", :class => "btn btn-primary btn-block" %>
+				  </div>
+
+			  </div>
+			<% end %>
+
+			</div>
+
 		</div>
+
+
+
 	</body>
+
+
+
+<!--  ORIGINAL CREATE FORM
+				<form id="create-form">
+				  <div class="form-row">
+
+				    <div class="col-md-6">
+				      <label for="schedule">Name</label>
+				      <input type="text" class="form-control" id="validationCustom01" placeholder="banana" required>
+				    </div>
+
+				    <div class="col-md-6">
+				      <label for="password">Description</label>
+				      <input type="text" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-4">
+				      <label for="password">Date 1</label>
+				      <input type="date" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				     <div class="col-md-4">
+				      <label for="password">Date 2</label>
+				      <input type="date" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-4">
+				      <label for="password">Date 3</label>
+				      <input type="date" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-12">
+				    	      <label for="submit"> <span style="visibility:hidden;">test </span> </label>
+				    	  <button class="btn btn-primary btn-block" type="submit">Schedule Meetup</button>
+				    </div>
+				  </div>
+				</form> -->
+
+
+
+<!-- Original Login Form -->
+	<!-- 				<form id="login-form" post="/tests/show">
+				  <div class="form-row">
+
+				    <div class="col-md-5">
+				      <label for="schedule">Session ID</label>
+				      <input type="text" class="form-control" id="validationCustom01" placeholder="banana" required>
+				    </div>
+
+				    <div class="col-md-5">
+				      <label for="password">Password</label>
+				      <input type="text" class="form-control" id="validationCustom02" placeholder="Kimjio" >
+				    </div>
+
+				    <div class="col-md-2">
+				    	      <label for="submit"> <span style="visibility:hidden;">test </span> </label>
+				    	  <button class="btn btn-primary btn-block" type="submit"> <%# link_to 'SUBMIT FORM', login_url %></button>
+				    </div>
+				  </div>
+				</form> -->

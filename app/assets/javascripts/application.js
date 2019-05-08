@@ -16,3 +16,15 @@
 //= require_tree .
 //= require cocoon
 //= require bootstrap-datepicker
+
+
+$(document).ready(() => {
+
+    $('#create-toggle').on('click', () => {
+        $('#create-form').slideToggle(400);
+    })
+
+    $('#login-toggle').on('click', () => {
+        $('#login-form').slideToggle(400);
+    })
+});
