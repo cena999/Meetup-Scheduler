@@ -1,24 +1,34 @@
+<body class="meetup-show">
+<div class="meetup-show-page">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @meetup.name %>
-</p>
+<div class="row">
+<h1 class="col-md-12">
+  <strong>Name:</strong> <span class="meetup-highlight"> <%= @meetup.name %> </span>
+</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @meetup.description %>
-</p>
+<h1 class="col-md-12">
+  <strong>Description:</strong> <span class="meetup-highlight"> <%= @meetup.description %> </span>
+</h1>
 
-<p>
+</div>
+<h2>
   <strong>Proposed Dates:</strong>
-  <ul>
-  	<% @meetup.schedules.each do |schedule| %>
-      <li><%= schedule.date %></li>
-    <% end %>
-  </ul>
-</p>
+  <br><br>
+<!--   <ul> -->
+		  	<div class="row">
+			  	<% @meetup.schedules.each do |schedule| %>
+				  		<div class="col-md-4">
+				  			<img src="/calendar2.png" alt="calendar" class="calender-img" />
+				      	<p><%= schedule.date %></p>
+				      </div>
+			    <% end %>
+    	   </div>
+<!--   </ul> -->
+</h2>
 
 
-<%= link_to 'Edit', edit_meetup_path(@meetup) %> |
-<%= link_to 'Back', meetups_path %>
+<p> <%= link_to 'Edit', edit_meetup_path(@meetup), :class => "btn btn-lg btn-block edit-date-btn" %> </p> <!-- | -->
+<%# link_to 'Back', meetups_path %>
+</div>
+</body>

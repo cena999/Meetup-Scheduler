@@ -225,3 +225,55 @@
 	background-color: #A7565F;
 	color: #EEF0F2;
 }
+
+.meetup-show {
+	background-image: url('https://cdn.stocksnap.io/img-thumbs/960w/D25OZNLFI2.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.meetup-show-page {
+	background-color: #0F1115;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 16px;
+	color: #EEF0F2;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.meetup-show-page h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.meetup-highlight {
+	color: #1B9AAA;
+}
+
+.edit-date-btn {
+	background-color: #E57582;
+	color: #EEF0F2;
+	font-weight: bold;
+}
+
+.edit-date-btn a {
+	background-color: #E57582;
+	color: #EEF0F2;
+	font-weight: bold;
+}
+
+.edit-date-btn:hover {
+	background-color: #A7565F;
+	color: #EEF0F2;
+}
+
+.meetup-show-page img {
+	max-width: 150px;
+}
+
+.meetup-show-page p {
+	font-weight: bold;
+	font-size: 16px;
+}
