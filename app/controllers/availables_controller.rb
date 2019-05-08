@@ -9,14 +9,20 @@ class AvailablesController < ApplicationController
 
 
   def create
-    # render plain: params[:available].inspect
+    # render plain: params[:person].inspect
+
+    @person = Person.new(available_params)
+
+    @person.save
+    redirect_to root_path
+
     # puts "schedule id 3 ----"
     # puts available_params["schedule_ids"]["3"]["id"]
-        render plain: available_params.inspect
+        # render plain: available_params.inspect
 
     # @available = Available.new(available_params)
 
-    # @res = params[:available]
+    # # @res = params[:available]
 
     # if @available.save
     #   redirect_to "/meetups/#{:meetups_id}/edit"
@@ -29,7 +35,7 @@ class AvailablesController < ApplicationController
 
   private
   def available_params
-    params.require(:available).permit(:person_name, :schedule_ids => {})
+    params.require(:person).permit(:person_name, :person_available => [])
   end
 
 
