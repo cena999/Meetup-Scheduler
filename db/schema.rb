@@ -31,13 +31,4 @@ ActiveRecord::Schema.define(version: 2019_05_06_060407) do
     t.index ["meetup_id"], name: "index_schedules_on_meetup_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string "session_name"
-    t.string "session_password"
-    t.string "proposed_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "schedules", "meetups"
 end

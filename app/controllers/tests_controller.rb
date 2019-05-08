@@ -36,9 +36,10 @@ end
     @meetup = Meetup.new(name: params[:dates]['name'], description: params[:dates]['description'], )
     @meetup.save
     @meetup_id = @meetup.id
-    # @schedule = Schedule.new
+    # @schedule = Schedule.new(meetup_id: 25)
+    # @schedule.save
     redirect_to "/meetups/#{@meetup.id}/edit"
-
+    # redirect_to "/meetups/2/edit"
 
   end
 
@@ -55,5 +56,7 @@ end
 
     def creation
       params.require(:meetup).permit(:name, :description, :password, schedules_attributes: [:id, :date, :_destroy])
+
+      params.require(:schedule).permit(:date)
     end
 end
