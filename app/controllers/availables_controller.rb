@@ -12,7 +12,7 @@ class AvailablesController < ApplicationController
     # render plain: params[:person].inspect
 
     @person = Person.new(available_params)
-
+byebug
     @person.save
     redirect_to root_path
 
@@ -35,8 +35,7 @@ class AvailablesController < ApplicationController
 
   private
   def available_params
-    params.require(:person).permit(:person_name, :person_available => [])
+    params.require(:meetup).permit(:person_name, :person_available => [], :schedule_ids => [])
   end
-
 
 end
