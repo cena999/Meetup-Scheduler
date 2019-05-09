@@ -17,14 +17,15 @@
 				<%= form.collection_check_boxes :schedule_ids, @meetup.schedules, :id, :date do |b| %>
         <%= b.label class:"label-checkbox col-md-4" do%>
          <%=b.check_box :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle => "success", :offstyle => "danger" }  %>
+
+<!--          http://www.bootstraptoggle.com/ -->
+<!-- https://stackoverflow.com/questions/32510159/implementing-bootstrap-toggle-switch -->
          <%=b.text %>
         <%end%>
 				<% end %>
 			</div>
 
 
-<!-- checked data-on-text="SI" -->
-			<%# https://stackoverflow.com/questions/24770491/style-rails-collection-check-boxes/24770643 %>
 
 			<div class="form-row"></div>
 		  <p>
