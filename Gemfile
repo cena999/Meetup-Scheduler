@@ -21,6 +21,10 @@ gem 'cocoon'
 # Use JQuery and bootstrap for datepicker
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'fa-checkbox'
+gem "font-awesome-rails"
+gem 'bootstrap-toggle-rails'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

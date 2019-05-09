@@ -16,6 +16,7 @@
 //= require_tree .
 //= require cocoon
 //= require bootstrap-datepicker
+//= require bootstrap-toggle
 
 
 $(document).ready(() => {
