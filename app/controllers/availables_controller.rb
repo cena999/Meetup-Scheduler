@@ -11,9 +11,15 @@ class AvailablesController < ApplicationController
   def create
     # render plain: params[:person].inspect
 
-    @person = Person.new(available_params)
-byebug
-    @person.save
+    schedules = available_params[:schedule_ids]
+
+    pax = Person.create(:person_name => available_params[:person_name])
+
+    schedules.each { |id| if id != "" then Schedule.find(id).people << pax end}
+
+    # @person = Person.new(available_params)
+
+    # @person.save
     redirect_to root_path
 
     # puts "schedule id 3 ----"
