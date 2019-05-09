@@ -23,4 +23,12 @@ Schedule.create(date: '01/14/2019', meetup_id: 3)
 Schedule.create(date: '08/18/2019', meetup_id: 3)
 Schedule.create(date: '04/28/2019', meetup_id: 3)
 
+Person.create(name: "kai", schedule_id: 1, meetup_id: 1)
+Person.create(name: "kaiser", schedule_id: 1, meetup_id: 1)
+Person.create(name: "karrsss", schedule_id: 1, meetup_id: 1)
+
+Person.create(name: "scad", schedule_id: 2, meetup_id: 1)
+Person.create(name: "krumpf", schedule_id: 2, meetup_id: 1)
+Person.create(name: "dalook", schedule_id: 2, meetup_id: 1)
+
 puts 'DATA SEEDEDDED'
