@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_05_08_084958) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_05_08_084958) do
   end
 
   create_table "people", force: :cascade do |t|
+
     t.string "person_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -36,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_05_08_084958) do
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_people_schedules_on_person_id"
     t.index ["schedule_id"], name: "index_people_schedules_on_schedule_id"
+
   end
 
   create_table "schedules", force: :cascade do |t|

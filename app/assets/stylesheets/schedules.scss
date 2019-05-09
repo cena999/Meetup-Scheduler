@@ -181,3 +181,99 @@
 .table thead {
 	background-color: #E57582;
 }
+
+
+.meetup-edit {
+	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/SKGNYY6PK9.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.meetup-edit-form {
+	background-color: #0F1115;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 16px;
+	color: #EEF0F2;
+	border-radius: 25px;
+}
+
+.meetup-edit h1, .meetup-edit h3 {
+	text-align: center;
+}
+
+.proposed-dates {
+	text-align: center;
+	// padding-top: 8px;
+}
+
+.proposed-dates a {
+	text-align: center;
+	color: #EEF0F2;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.update-date-btn {
+	background-color: #E57582;
+	color: #EEF0F2;
+	font-weight: bold;
+}
+
+.update-date-btn:hover {
+	background-color: #A7565F;
+	color: #EEF0F2;
+}
+
+.meetup-show {
+	background-image: url('https://cdn.stocksnap.io/img-thumbs/960w/D25OZNLFI2.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.meetup-show-page {
+	background-color: #0F1115;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 16px;
+	color: #EEF0F2;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.meetup-show-page h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.meetup-highlight {
+	color: #1B9AAA;
+}
+
+.edit-date-btn {
+	background-color: #E57582;
+	color: #EEF0F2;
+	font-weight: bold;
+}
+
+.edit-date-btn a {
+	background-color: #E57582;
+	color: #EEF0F2;
+	font-weight: bold;
+}
+
+.edit-date-btn:hover {
+	background-color: #A7565F;
+	color: #EEF0F2;
+}
+
+.meetup-show-page img {
+	max-width: 150px;
+}
+
+.meetup-show-page p {
+	font-weight: bold;
+	font-size: 16px;
+}
