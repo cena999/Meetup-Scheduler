@@ -21,9 +21,7 @@
 				  		<div class="col-md-4">
 				  			<img src="/calendar2.png" alt="calendar" class="calender-img" />
 				      	<p><%= schedule.date %></p>
-<!-- 				      	<p> Name1 : ⭕ </p>
-				      	<p> Name2 : ⭕ </p>
-				      	<p> Name3 : ⭕ </p> -->
+
 				      	<% schedule.people.each do |person| %>
 									<p><%= person.person_name %></p>
 								<% end %>
@@ -36,17 +34,23 @@
 
 
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<p> <%= link_to 'Edit Dates', edit_meetup_path(@meetup), :class => "btn btn-lg btn-block edit-date-btn" %> </p> <!-- | -->
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<p> <%= link_to 'Edit Names', availables_path(@meetup), :class => "btn btn-lg btn-block edit-name-btn" %> </p>
 	</div>
 
+	<div class="col-md-4">
+	<button type="button" class="btn btn-success btn-block btn-lg"><a href="<%= @mail %>">  Ping Your Friends</a> </button>
+	</div>
 </div>
 <%# link_to 'Back', meetups_path %>
 
+
+
+<br><br>
 <a href="/index"> <p> Return to Index Page</p>  </a>
 </div>
 </body>

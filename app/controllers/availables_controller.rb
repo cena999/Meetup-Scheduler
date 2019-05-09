@@ -12,12 +12,14 @@ class AvailablesController < ApplicationController
     # render plain: params[:person].inspect
 
     schedules = available_params[:schedule_ids]
+    @meetup = Meetup.find(params[:meetups_id])
+
 
     pax = Person.create(:person_name => available_params[:person_name])
 
     schedules.each { |id| if id != "" then Schedule.find(id).people << pax end }
 
-    redirect_to root_path
+    redirect_to @meetup
 
   end
 
