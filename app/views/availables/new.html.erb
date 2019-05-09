@@ -1,14 +1,28 @@
-<%= form_with scope: :meetup, url: availables_path, local: true do |form| %>
 
+<body class="availables-page">
+	<div class="availables-start">
+		<h3>Add in Name and Availability </h3>
 
-	<p>
-		<%= form.label :partcipant_name %>
-		<%= form.text_field :person_name %>
-	</p>
+		<%= form_with scope: :meetup, url: availables_path, local: true do |form| %>
 
-<%= form.collection_check_boxes :schedule_ids, @meetup.schedules, :id, :date %>
+		<div class="form-row">
+			<div class="col-md-12">
+			<p>
+				<%= form.label :partcipant_name %>
+				<%= form.text_field :person_name, :class => "form-control", placeholder: "Susan Chan" %>
+			</p>
+			</div>
+		</div>
+			<div class="form-row">
+				<%= form.collection_check_boxes :schedule_ids, @meetup.schedules, :id, :date, :class => "btn-primary col-md-4" %>
+			</div>
 
-  <p>
-	<%= form.submit %>
-  </p>
-<% end %>
+			<div class="form-row"></div>
+		  <p>
+			<%= form.submit "Add Name", :class => "btn btn-primary btn-block" %>
+		  </p>
+		  </div>
+		<% end %>
+		</div>
+	</div>
+</body>
