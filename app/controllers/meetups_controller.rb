@@ -10,6 +10,9 @@ class MeetupsController < ApplicationController
   # GET /meetups/1
   # GET /meetups/1.json
   def show
+    # @meetups = Meetup.all
+    @people = Person.all
+    # @person = Person.find(1)
   end
 
   # GET /meetups/new
@@ -66,6 +69,8 @@ class MeetupsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_meetup
       @meetup = Meetup.find(params[:id])
+
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

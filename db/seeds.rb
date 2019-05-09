@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Meetup.create(name: 'Teo', description: 'Teo')
+Meetup.create(name: 'Chang', description: 'Chang')
+Meetup.create(name: 'Hao', description: 'Hao')
+
+Schedule.create(date: '05/25/2019' , meetup_id: 1)
+Schedule.create(date: '04/18/2019' , meetup_id: 1)
+Schedule.create(date: '03/16/2019', meetup_id: 1)
+
+Schedule.create(date: '11/23/2019', meetup_id: 2)
+Schedule.create(date: '07/25/2019', meetup_id: 2)
+Schedule.create(date: '09/09/2019', meetup_id: 2)
+
+Schedule.create(date: '01/14/2019', meetup_id: 3)
+Schedule.create(date: '08/18/2019', meetup_id: 3)
+Schedule.create(date: '04/28/2019', meetup_id: 3)
+
+Person.create(name: "kai", schedule_id: 1, meetup_id: 1)
+Person.create(name: "kaiser", schedule_id: 1, meetup_id: 1)
+Person.create(name: "karrsss", schedule_id: 1, meetup_id: 1)
+
+Person.create(name: "scad", schedule_id: 2, meetup_id: 1)
+Person.create(name: "krumpf", schedule_id: 2, meetup_id: 1)
+Person.create(name: "dalook", schedule_id: 2, meetup_id: 1)
+
+puts 'DATA SEEDEDDED'
