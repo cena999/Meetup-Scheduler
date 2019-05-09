@@ -24,12 +24,10 @@
 <!-- 				      	<p> Name1 : ⭕ </p>
 				      	<p> Name2 : ⭕ </p>
 				      	<p> Name3 : ⭕ </p> -->
-				      	<% schedule.people.each do | person | %>
-				      		<p><%= person.name  %></p>
-				      	<% end %>
-<!-- 				      	<p><%= schedule.people %></p>
- -->
-</div>
+				      	<% schedule.people.each do |person| %>
+									<p><%= person.person_name %></p>
+								<% end %>
+							</div>
 			    <% end %>
     	   </div>
 <!--   </ul> -->
@@ -37,8 +35,18 @@
 
 
 
+<div class="row">
+	<div class="col-md-6">
+		<p> <%= link_to 'Edit Dates', edit_meetup_path(@meetup), :class => "btn btn-lg btn-block edit-date-btn" %> </p> <!-- | -->
+	</div>
 
-<p> <%= link_to 'Edit', edit_meetup_path(@meetup), :class => "btn btn-lg btn-block edit-date-btn" %> </p> <!-- | -->
+	<div class="col-md-6">
+		<p> <%= link_to 'Edit Names', availables_path(@meetup), :class => "btn btn-lg btn-block edit-name-btn" %> </p>
+	</div>
+
+</div>
 <%# link_to 'Back', meetups_path %>
+
+<a href="/index"> <p> Return to Index Page</p>  </a>
 </div>
 </body>
