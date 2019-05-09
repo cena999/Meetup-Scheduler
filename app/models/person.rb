@@ -1,6 +1,6 @@
 class Person < ApplicationRecord
 
+  has_and_belongs_to_many :schedules
   belongs_to :meetup
-  belongs_to :schedule
 
 end

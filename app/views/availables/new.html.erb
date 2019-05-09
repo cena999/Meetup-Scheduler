@@ -1,0 +1,14 @@
+<%= form_with scope: :meetup, url: availables_path, local: true do |form| %>
+
+
+	<p>
+		<%= form.label :partcipant_name %>
+		<%= form.text_field :person_name %>
+	</p>
+
+<%= form.collection_check_boxes :schedule_ids, @meetup.schedules, :id, :date %>
+
+  <p>
+	<%= form.submit %>
+  </p>
+<% end %>

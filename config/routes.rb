@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   post '/tests/new' => "tests#new"
 
+  get 'meetups/:meetups_id/availables' => 'availables#new', as: 'availables'
+  post 'meetups/:meetups_id/availables' => 'availables#create'
 end

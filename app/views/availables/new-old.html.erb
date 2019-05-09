@@ -1,0 +1,18 @@
+<h1><%= @meetup.name %></h1>
+
+<%= form_with scope: :available, url: availables_path, local: true do |form| %>
+	<p>
+		<%= form.label :partcipant_name %>
+		<%= form.text_field :person_name %>
+	</p>
+
+	<% @meetup.schedules.each do |schedule| %>
+		<%= fields_for "available[schedule_ids][]", schedule do |available_fields| %>
+			<%= schedule.date %><%= available_fields.check_box :id%>
+		<% end %>
+	<% end %>
+
+	<p>
+		<%= form.submit 'Submit Participation'%>
+	</p>
+<% end %>
