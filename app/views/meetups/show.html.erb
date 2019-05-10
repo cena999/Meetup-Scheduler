@@ -20,7 +20,7 @@
 			  	<% @meetup.schedules.order(:date).each do |schedule| %>
 				  		<div class="col-md-4">
 				  			<img src="/calendar2.png" alt="calendar" class="calender-img" />
-				      	<p><%= schedule.date %></p>
+				      	<p><%= schedule.date.split("/").reverse.join("/") %></p>
 
 				      	<% schedule.people.each do |person| %>
 									<p><%= person.person_name %></p>
@@ -39,11 +39,11 @@
 	</div>
 
 	<div class="col-md-4">
-		<p> <%= link_to 'Edit Names', availables_path(@meetup), :class => "btn btn-lg btn-block edit-name-btn" %> </p>
+		<p> <%= link_to 'Add Availability', availables_path(@meetup), :class => "btn btn-lg btn-block edit-name-btn" %> </p>
 	</div>
 
 	<div class="col-md-4">
-	<button type="button" class="btn btn-success btn-block btn-lg"><a href="<%= @mail %>">  Ping Your Friends</a> </button>
+	<button type="button" class="btn btn-lg btn-block btn-mailer"><a href="<%= @mail %>">  Ping Your Friends</a> </button>
 	</div>
 </div>
 <%# link_to 'Back', meetups_path %>
