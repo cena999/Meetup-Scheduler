@@ -6,6 +6,14 @@ body a {
 	color: #EEF0F2 !important;
 }
 
+h1, h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+body, input {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .index-page {
 	background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/AO8NDC5UDL.jpg");
 	background-size: cover;
@@ -272,6 +280,7 @@ body a {
 .edit-date-btn:hover {
 	background-color: #A7565F;
 	color: #EEF0F2;
+	font-weight: bold;
 }
 
 .edit-name-btn {
@@ -281,12 +290,31 @@ body a {
 }
 
 .edit-name-btn:hover {
-	background-color: #1B9AAA;
+	background-color: #177F8C;
 	color: #EEF0F2;
+	font-weight: bold;
 }
 
-.btn-success {
+.btn-mailer {
 	font-weight: bold;
+	background-color: #30A54A;
+}
+
+.btn-mailer:hover {
+	background-color: #2E7E40;
+	font-weight: bold;
+}
+
+.btn-mailer a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.btn-mailer a {
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
 }
 
 .meetup-show-page img {
