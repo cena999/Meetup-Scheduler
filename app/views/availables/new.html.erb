@@ -9,7 +9,7 @@
 			<div class="col-md-12">
 			<p>
 				<%= form.label :partcipant_name %>
-				<%= form.text_field :person_name, :class => "form-control", placeholder: "Susan Chan" %>
+				<%= form.text_field :person_name, :class => "form-control", placeholder: "Eg. Susan Chan" %>
 			</p>
 			</div>
 		</div>
@@ -19,7 +19,8 @@
          <%=b.check_box :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle => "success", :offstyle => "danger" }  %>
 
 <!--          http://www.bootstraptoggle.com/ -->
-<!-- https://stackoverflow.com/questions/32510159/implementing-bootstrap-toggle-switch -->
+<!-- https://stackoverflow.com/questions/32510159/implementing-bootstrap-toggle-switch
+ THANK YOU JOHNSORRENTINO T_T -->
          <%=b.text %>
         <%end%>
 				<% end %>
