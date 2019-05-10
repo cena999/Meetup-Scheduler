@@ -280,6 +280,7 @@ body, input {
 .edit-date-btn:hover {
 	background-color: #A7565F;
 	color: #EEF0F2;
+	font-weight: bold;
 }
 
 .edit-name-btn {
@@ -291,6 +292,7 @@ body, input {
 .edit-name-btn:hover {
 	background-color: #177F8C;
 	color: #EEF0F2;
+	font-weight: bold;
 }
 
 .btn-mailer {
@@ -300,9 +302,16 @@ body, input {
 
 .btn-mailer:hover {
 	background-color: #2E7E40;
+	font-weight: bold;
 }
 
 .btn-mailer a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.btn-mailer a {
 	font-weight: bold;
 	text-decoration: none;
 	background-color: transparent;

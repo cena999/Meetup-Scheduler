@@ -9,14 +9,13 @@
 Meetup.create(name: 'Code reading', description: 'project 3 code')
 Meetup.create(name: 'Dinner', description: 'Fu-men at Hong Leong Building')
 
-Schedule.create(date: '05/25/2019' , meetup_id: 1)
-Schedule.create(date: '04/18/2019' , meetup_id: 1)
+Schedule.create(date: '2019/05/25' , meetup_id: 1)
+Schedule.create(date: '2019/04/18' , meetup_id: 1)
 
 
-Schedule.create(date: '11/23/2019', meetup_id: 2)
-Schedule.create(date: '07/25/2019', meetup_id: 2)
-Schedule.create(date: '09/09/2019', meetup_id: 2)
+Schedule.create(date: '2019/11/23', meetup_id: 2)
+Schedule.create(date: '2019/07/25', meetup_id: 2)
+Schedule.create(date: '2019/09/09', meetup_id: 2)
 
 
 puts 'DATA SEEDEDDED'
-
