@@ -17,7 +17,7 @@
   <br><br>
 <!--   <ul> -->
 		  	<div class="row">
-			  	<% @meetup.schedules.each do |schedule| %>
+			  	<% @meetup.schedules.order(:date).each do |schedule| %>
 				  		<div class="col-md-4">
 				  			<img src="/calendar2.png" alt="calendar" class="calender-img" />
 				      	<p><%= schedule.date %></p>

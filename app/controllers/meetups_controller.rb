@@ -13,8 +13,6 @@ class MeetupsController < ApplicationController
     # @meetups = Meetup.all
     @people = Person.all
     # @person = Person.find(1)
-    schedulesss = Meetup.find(id=1).schedules
-    schedulesss.each { |id| id.people.each { |person| puts person.person_name  }  }
   end
 
   # GET /meetups/new
