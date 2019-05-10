@@ -280,6 +280,15 @@ body a {
 	font-weight: bold;
 }
 
+.edit-name-btn:hover {
+	background-color: #1B9AAA;
+	color: #EEF0F2;
+}
+
+.btn-success {
+	font-weight: bold;
+}
+
 .meetup-show-page img {
 	max-width: 150px;
 }
@@ -304,4 +313,13 @@ body a {
 	color: #EEF0F2;
 	border-radius: 25px;
 	text-align: center;
+}
+
+.check-boxes label {
+	color: white;
+	font-weight: bold;
+}
+
+.check-boxes input {
+
 }

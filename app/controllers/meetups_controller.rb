@@ -71,8 +71,10 @@ class MeetupsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_meetup
       @meetup = Meetup.find(params[:id])
+      @meetup_id = @meetup.id
+      @url = "https://localhost:3000/meetups/#{@meetup_id}"
 
-
+      @mail = "mailto:?subject=Meetup Dates&body=Hey Friends, Fill in your available dates at #{@url}"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
